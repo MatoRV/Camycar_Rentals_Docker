@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mipassword
+      MYSQL_DATABASE: dbcamycar_rentals
+      MYSQL_PASSWORD: mipassword
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3335:3306"
